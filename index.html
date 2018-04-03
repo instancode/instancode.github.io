@@ -9,6 +9,9 @@
             text-decoration: none;
           }
           .wrapper {
+            display: none;
+          }
+          .wrapper {
               position: relative;
               width: 640px;
               margin: 50px auto;
@@ -230,7 +233,7 @@
         </style>
     </head>
     <body>
-        <div class="wrapper">
+    <div id="wrapper" class="wrapper">
       <div class="b-content">
           <div class="b-content-inset clearfix">
               <div class="b-join">
@@ -284,6 +287,9 @@
       if (getQueryString('checkoutId')) {
         window.location.href = "https://pay.paddle.com/checkout/" + getQueryString('checkoutId');
       }
+      setTimeout(function () {
+        document.getElementById('wrapper').style.display = 'block';
+      }, 1500);
     </script>
     </body>
 </html>
